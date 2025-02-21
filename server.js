@@ -19,9 +19,6 @@ const sheets = google.sheets({ version: "v4", auth });
 
 const SPREADSHEET_ID = "18hzRKoQy--Nty3WBusecwU_TZvlXc6pf71w2sgzhd-E"; // Replace with actual Google Sheet ID
 
-const cors = require("cors");
-app.use(cors()); // Enable CORS for all origins
-
 app.post("/submit", async (req, res) => {
   const { basicDetails, ffqResponses, pssScore, otherScales } = req.body;
 
